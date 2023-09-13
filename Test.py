@@ -1,15 +1,13 @@
 import customtkinter
 
 calculation = ""
-#t
+
 class Calc(customtkinter.CTk):
     def __init__(self):
         super().__init__()
         
-        customtkinter.set_appearance_mode("System")  # Modes: system (default), light, dark
-        customtkinter.set_default_color_theme("green")  # Themes: blue (default), dark-blue, green
-        
-        
+        customtkinter.set_appearance_mode("System")
+        customtkinter.set_default_color_theme("green") 
 
         def add_to(symbol):
             global calculation
@@ -38,7 +36,7 @@ class Calc(customtkinter.CTk):
                                     font = customtkinter.CTkFont(family = "Arial", size = 24))
         self.result.grid(row = 0, column = 0, rowspan = 3, columnspan=5, pady = (0,20), sticky="nsew")
 
-        # Use CTkButton instead of tkinter Button
+
         self.button1 = customtkinter.CTkButton(master=self, 
                                         width=100,
                                         height=50,
